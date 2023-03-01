@@ -34,10 +34,11 @@ function update(){
     })
     const actives = document.querySelectorAll('.active')
     progress.style.width = (actives.length - 1 ) / (circles.length - 1)* 100 + '%'
-
+//progressive step
     if(currentActive == 1){
         prev.disabled = true
-    }else if(current === circles.length){
+//regressive step
+    }else if(currentActive === circles.length){
         next.disabled = true
     }else{
         prev.disabled = false
